@@ -7,6 +7,14 @@ namespace Relics
 	public abstract class AbstractRelics
 	{
 		protected Status status = new Status();
+		public Status Status
+		{
+			get
+			{
+				return status;
+			}
+		}
+
 		public abstract void Init();
 		public virtual void OnPickUpRelics() { }
 		public virtual void OnBattleStart() { }
