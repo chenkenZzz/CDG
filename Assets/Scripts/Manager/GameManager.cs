@@ -5,11 +5,14 @@ using UnityEngine;
 
 namespace Manager
 {
+	[DefaultExecutionOrder(-100)]
+	[DisallowMultipleComponent]
 	public class GameManager : MonoBehaviour
 	{
 		private void Awake()
 		{
-			
+			MsgManager.Instance.Init();
+			RandomManager.Instance.Init();
 		}
 
 		private void Start()
@@ -24,7 +27,8 @@ namespace Manager
 
 		private void OnDestroy()
 		{
-			
+			MsgManager.Instance.Destory();
+			RandomManager.Instance.Destory();
 		}
 	}
 }

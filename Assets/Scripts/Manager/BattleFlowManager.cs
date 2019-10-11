@@ -11,7 +11,7 @@ namespace Manager
 		[SerializeField] private AbstractHero hero;
 		[SerializeField] private List<AbstractEnemy> enemies;
 
-		private void Init()
+		public void Init()
 		{
 
 		}

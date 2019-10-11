@@ -6,16 +6,13 @@ namespace Manager
 {
 	public class VirtualPlayerManager : MonoBehaviour
 	{
-		private Status status = new Status();
-		public Status Status
+
+		public void Init()
 		{
-			get
-			{
-				return status;
-			}
+
 		}
 
-		private void Init()
+		public void OnUpdate()
 		{
 
 		}
