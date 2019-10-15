@@ -9,14 +9,14 @@ namespace Action
 		private GameObject target;
 		private Vector3 from;
 		private Vector3 to;
-		private float drawCardMoveTime;
-		private float drawCardMoveDelay;
+		private float cardMoveTime;
+		private float cardMoveDelay;
 
 		public override bool IsOver
 		{
 			get
 			{
-				return drawCardMoveTime >= drawCardMoveDelay; 
+				return cardMoveTime >= cardMoveDelay; 
 			}
 		}
 
@@ -25,15 +25,15 @@ namespace Action
 			this.target = target;
 			this.from = from;
 			this.to = to;
-			this.drawCardMoveDelay = drawCardMoveDelay;
+			this.cardMoveDelay = drawCardMoveDelay;
 		}
 		public override void Excute()
 		{
 			if (!IsOver)
 			{
-				target.transform.position = Vector3.Lerp(from, to, drawCardMoveTime / drawCardMoveDelay);
+				target.transform.position = Vector3.Lerp(from, to, cardMoveTime / cardMoveDelay);
 
-				drawCardMoveTime += Time.deltaTime;
+				cardMoveTime += Time.deltaTime;
 			}
 			else
 			{

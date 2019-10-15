@@ -13,6 +13,7 @@ namespace Manager
 		{
 			MsgManager.Instance.Init();
 			RandomManager.Instance.Init();
+			ActionManager.Instance.Init();
 		}
 
 		private void Start()
@@ -29,6 +30,7 @@ namespace Manager
 		{
 			MsgManager.Instance.Destory();
 			RandomManager.Instance.Destory();
+			ActionManager.Instance.Destory();
 		}
 	}
 }

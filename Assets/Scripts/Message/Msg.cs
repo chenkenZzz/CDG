@@ -58,7 +58,7 @@ namespace Msg
 
 		public void Send()
 		{
-			MsgManager.Instance.Excute(this);
+			MsgManager.Instance.Fire(this);
 		}
 	}
 }

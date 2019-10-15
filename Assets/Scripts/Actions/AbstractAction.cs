@@ -7,10 +7,7 @@ namespace Action
 	{
 		public abstract bool IsOver { get; }
 		
-		protected AbstractAction()
-		{
-			
-		}
+		protected AbstractAction(){	}
 
 		public abstract void Excute();
 	}

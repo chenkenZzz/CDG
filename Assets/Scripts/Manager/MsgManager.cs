@@ -48,7 +48,7 @@ namespace Manager
 			return false;
 		}
 
-		public void Excute(Msg.Msg msg)
+		public void Fire(Msg.Msg msg)
 		{
 			if(!msgs.ContainsKey(msg.Type))
 			{
