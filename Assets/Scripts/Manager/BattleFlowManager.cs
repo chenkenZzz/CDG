@@ -38,9 +38,21 @@ namespace Manager
 
 		private void CheckReason()
 		{
-			if (IfAnimationIsOver("BattlePrepare"))
+			switch(stateManager.Current.Type)
 			{
-				stateManager.Translate(StateType.BATTLE_PLAYER_TURN);
+				case StateType.BATTLE_PREPARE:
+					if(IfCurrentAnimationIsOver("BattlePrepare"))
+					{
+						stateManager.Translate(StateType.BATTLE_PLAYER_TURN);
+					}
+					break;
+
+				case StateType.BATTLE_PLAYER_TURN:
+					break;
+
+				case StateType.BATTLE_ENEMY_TURN:
+					break;
+
 			}
 		}
 
@@ -49,7 +61,7 @@ namespace Manager
 			stateManager.Add(new BattlePrepareState(animator));
 		}
 
-		private bool IfAnimationIsOver(string name)
+		private bool IfCurrentAnimationIsOver(string name)
 		{
 			return animator.GetCurrentAnimatorStateInfo(0).IsName(name) && animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f;
 		}
