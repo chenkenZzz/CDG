@@ -1,6 +1,0 @@
-﻿public enum StateType
-{
-	BATTLE_PREPARE,
-	BATTLE_PLAYER_TURN,
-	BATTLE_ENEMY_TURN,
-}
