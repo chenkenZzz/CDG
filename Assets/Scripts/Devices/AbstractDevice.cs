@@ -10,5 +10,6 @@ namespace Device
 		public virtual void Set(AbstractCard card) { }
 		public abstract void Execute();
 		public virtual void Reset() { }
+		public virtual void Reset(AbstractCard card) { }
 	}
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using Msg;
 
 namespace Card
 {
@@ -32,7 +33,6 @@ namespace Card
 		protected void Update()
 		{
 			ShowInUI();
-			ObserveCard();
 		}
 
 		private void SetComponents()
@@ -51,24 +51,46 @@ namespace Card
 			cardCostText.text = Cost.ToString();
 		}
 
-		private void ObserveCard()
-		{
-
-		}
 
 		public void OnPointerEnter(PointerEventData eventData)
 		{
-			Hand.observeDevice.Set(this);
+			MessageCenter.Instance.SendMessage(
+				new Message
+				(
+					MsgCode.MSG_ObserveCard, 
+					new KeyValuePair<string, object>("Card", this)
+				));
 		}
 
 		public void OnPointerExit(PointerEventData eventData)
 		{
-			Hand.observeDevice.Reset();
+			MessageCenter.Instance.SendMessage(
+			new Message
+			(
+				MsgCode.MSG_DoNotObserveCard,
+				new KeyValuePair<string, object>("Card", this)
+			));
 		}
 
 		public void OnPointerDown(PointerEventData eventData)
 		{
-			
+			if(Input.GetMouseButtonDown(0))
+			{
+				MessageCenter.Instance.SendMessage(
+				new Message
+				(
+					MsgCode.MSG_SeletCard,
+					new KeyValuePair<string, object>("Card", this)
+				));
+			}
+			else if(Input.GetMouseButtonDown(1))
+			{
+				MessageCenter.Instance.SendMessage(
+				new Message
+				(
+					MsgCode.MSG_ConcellSelectCard
+				));
+			}
 		}
 	}
 }
