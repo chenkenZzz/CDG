@@ -9,16 +9,18 @@ public class Hand : MonoBehaviour
 {
 	private AbstractDevice observeDevice;
 	private AbstractDevice selectDevice;
+	private AbstractDevice sortingDevice;
 
 	private void Awake()
 	{
 		observeDevice = new ObserveDevice();
 		selectDevice = new SelectDevice();
+		sortingDevice = new SortingDevice();
 
-		MessageCenter.Instance.Subscribe(MsgCode.MSG_ObserveCard, ObserveCard);
-		MessageCenter.Instance.Subscribe(MsgCode.MSG_DoNotObserveCard, DoNotObserveCard);
-		MessageCenter.Instance.Subscribe(MsgCode.MSG_SeletCard, SelectCard);
-		MessageCenter.Instance.Subscribe(MsgCode.MSG_ConcellSelectCard, ConcellSelectCard);
+		MessageCenter.Instance.Subscribe(MsgCode.MSG_MouseHoverIntoCard, ObserveCard);
+		MessageCenter.Instance.Subscribe(MsgCode.MSG_MouseHoverOutCard, DoNotObserveCard);
+		MessageCenter.Instance.Subscribe(MsgCode.MSG_MouseLeftClickCard, SelectCard);
+		MessageCenter.Instance.Subscribe(MsgCode.MSG_MouseRightClickCard, ConcellSelectCard);
 	}
 
 	private void Update()
@@ -52,10 +54,10 @@ public class Hand : MonoBehaviour
 
 	public void OnDestroy()
 	{
-		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_ObserveCard, ObserveCard);
-		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_DoNotObserveCard, DoNotObserveCard);
-		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_SeletCard, SelectCard);
-		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_ConcellSelectCard, ConcellSelectCard);
+		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_MouseHoverIntoCard, ObserveCard);
+		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_MouseHoverOutCard, DoNotObserveCard);
+		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_MouseLeftClickCard, SelectCard);
+		MessageCenter.Instance.Unsubscribe(MsgCode.MSG_MouseRightClickCard, ConcellSelectCard);
 	}
 }
 

@@ -2,9 +2,9 @@
 {
 	public enum MsgCode
 	{
-		MSG_ObserveCard,
-		MSG_DoNotObserveCard,
-		MSG_SeletCard,
-		MSG_ConcellSelectCard,
+		MSG_MouseHoverIntoCard,
+		MSG_MouseHoverOutCard,
+		MSG_MouseLeftClickCard,
+		MSG_MouseRightClickCard,
 	}
 }

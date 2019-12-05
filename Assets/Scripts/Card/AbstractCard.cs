@@ -57,7 +57,7 @@ namespace Card
 			MessageCenter.Instance.SendMessage(
 				new Message
 				(
-					MsgCode.MSG_ObserveCard, 
+					MsgCode.MSG_MouseHoverIntoCard, 
 					new KeyValuePair<string, object>("Card", this)
 				));
 		}
@@ -67,7 +67,7 @@ namespace Card
 			MessageCenter.Instance.SendMessage(
 			new Message
 			(
-				MsgCode.MSG_DoNotObserveCard,
+				MsgCode.MSG_MouseHoverOutCard,
 				new KeyValuePair<string, object>("Card", this)
 			));
 		}
@@ -79,7 +79,7 @@ namespace Card
 				MessageCenter.Instance.SendMessage(
 				new Message
 				(
-					MsgCode.MSG_SeletCard,
+					MsgCode.MSG_MouseLeftClickCard,
 					new KeyValuePair<string, object>("Card", this)
 				));
 			}
@@ -88,7 +88,7 @@ namespace Card
 				MessageCenter.Instance.SendMessage(
 				new Message
 				(
-					MsgCode.MSG_ConcellSelectCard
+					MsgCode.MSG_MouseRightClickCard
 				));
 			}
 		}
