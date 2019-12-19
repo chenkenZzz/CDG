@@ -23,6 +23,13 @@ namespace FSM
 		private int allocPointer = 0;
 
 		private State curState;
+		public StateType CurStateType
+		{
+			get
+			{
+				return curState.Type;
+			}
+		}
 		private bool isLock = true;
 
 		public StateMachine(int allocSize)
