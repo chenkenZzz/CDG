@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E283474D-8F95-6542-7999-50BA235929D6}</ProjectGuid>
+    <ProjectGuid>{06D305BE-3C3C-C161-146A-901C7B173924}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -60,28 +60,29 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scenes\Scripts\AbstractCard.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Actors\AbstractEnemy.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Actors\AbstractHero.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Attribute\AttributeType.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Base\Singleton.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Powers\AbstractBuff.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Relics\AbstractRelics.cs" />
-    <Compile Include="Assets\Scenes\Scripts\Status.cs" />
+    <Compile Include="Assets\Scripts\Actor\NPC\AbstractNPC.cs" />
+    <Compile Include="Assets\Scripts\Actor\NPC\WeaponSellNPC.cs" />
+    <Compile Include="Assets\Scripts\Base\Singleton.cs" />
+    <Compile Include="Assets\Scripts\Control\InputController.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\Msg\Msg.cs" />
+    <Compile Include="Assets\Scripts\Msg\MsgCenter.cs" />
+    <Compile Include="Assets\Scripts\UI\UI_TalkTextHandler.cs" />
+    <Compile Include="Assets\Scripts\UI\UIManager.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/17CU0320/C/c/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>D:/17CU0320/C/c/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/17CU0320/C/c/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/17CU0320/C/c/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.DataPrivacy">
-      <HintPath>D:/17CU0320/C/c/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -285,13 +286,13 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>D:/17CU0320/C/c/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>D:/17CU0320/C/c/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>D:/17CU0320/C/c/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>D:/17CU0320/TempGame/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
